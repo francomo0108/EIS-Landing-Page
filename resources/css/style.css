@@ -1,0 +1,579 @@
+/* Blue: #00a8ff */
+
+
+/* -------------------------------------- */
+
+
+/* BASIC SETUP */
+
+
+/* -------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-size: 20px;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+
+/* clear float */
+
+
+/* .clearfix { zoom: 1 }
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+} */
+
+
+/* -------------------------------------- */
+
+
+/* REUSABLE COMPONENTS */
+
+
+/* -------------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+
+/* ---------- HEADINGS ---------- */
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    /* modified normalize.css file */
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 225%;
+    word-spacing: 3px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #00a8ff;
+    content: " ";
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+/* ---------- PARAGRAPHS ---------- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+    text-align: center;
+}
+
+
+/* ---------- ICONS ---------- */
+
+.icon-big {
+    font-size: 300%;
+    display: block;
+    color: #00a8ff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #00a8ff;
+    font-size: 120%;
+    line-height: 120%;
+    margin-top: -4px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 20px;
+    -webkit-transition: background-color 0.3s, border 0.3s, color 0.3s;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #00a8ff;
+    border: 1px solid #00a8ff;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #00a8ff;
+    color: #00a8ff;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #0086cc;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #0086cc;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #0086cc;
+    color: #fff;
+}
+
+
+/* -------------------------------------- */
+
+
+/* HEADER */
+
+
+/* -------------------------------------- */
+
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(img/header.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/header.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-47.5%, -50%);
+    transform: translate(-47.5%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 15px;
+}
+
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 5px 0;
+}
+
+
+/* Main navi */
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 4px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 95%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.3s;
+    transition: border-bottom 0.3s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #00a8ff;
+}
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+
+/* Sticky navi */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 8px 0;
+    color: #555;
+}
+
+.sticky .main-nav {
+    margin-top: 18px;
+    margin-right: 6%;
+    font-size: 70%;
+}
+
+.sticky .logo {
+    display: none;
+    margin-left: 6%;
+}
+
+.sticky .logo-black {
+    display: block;
+    margin-left: 6%;
+}
+
+
+/* ------------------------------------------ */
+
+
+/* FEATURES */
+
+
+/* ------------------------------------------ */
+
+.section-features .long-copy {
+    margin-bottom: 20px;
+}
+
+
+/* -------------------------------------- */
+
+
+/* SHOWCASE */
+
+
+/* -------------------------------------- */
+
+.section-students {
+    padding: 0;
+    display: flow-root;
+}
+
+.students-showcase {
+    list-style: none;
+    width: 100%;
+    float: left;
+}
+
+.students-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.student-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.student-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: 200px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.student-photo img:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+
+/* -------------------------------------- */
+
+
+/* CITIES */
+
+
+/* -------------------------------------- */
+
+.box img {
+    width: 100%;
+    height: 150px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.city-feature {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+/* -------------------------------------- */
+
+
+/* Testimonials */
+
+
+/* -------------------------------------- */
+
+.section-testimonials {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(img/testimonials.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/testimonials.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 30px;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 90%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+/* -------------------------------------- */
+
+
+/* FORM */
+
+
+/* -------------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {
+    outline: none
+}
+
+
+/* -------------------------------------- */
+
+
+/* FOOTER */
+
+
+/* -------------------------------------- */
+
+footer {
+    background-color: #333;
+    padding: 15px 40px 15px 40px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition: color 0.4s;
+    transition: color 0.4s;
+    padding: 0 15px;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+    color: #55acee;
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+.ion-social-instagram:hover {
+    color: #e95950;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 20px;
+}
